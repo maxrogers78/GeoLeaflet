@@ -1,7 +1,10 @@
+// Components
+const { default: MapView } = require("./components/MapView");
+
 function App() {
   return (
     <div>
-      <h1>Hello World!</h1>
+      <MapView />
     </div>
   );
 }
