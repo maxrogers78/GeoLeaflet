@@ -9,6 +9,8 @@ A simple ReactJs application using Leaftlet for geolocation
 
 ### External modules
 
+- react-router-dom
+
 ## Build node_modules
 
 In the project directory, run `npm i` or `npm install`
