@@ -2,17 +2,18 @@
 import React from "react";
 // Leaflet
 import { Marker } from "react-leaflet";
+// Components
 import IconLocation from "./IconLocation";
+// Assets
+import { places } from "../assets/coords.json";
 
-const Markers = () => {
-  // Vancouver { lat: "49.281643", lng: "-123.114309" }
-  // Calgary { lat: "51.042913", lng: "-114.067616" }
-
+const Markers = ({ places }) => {
   return (
-    <Marker
-      position={{ lat: "49.281643", lng: "-123.114309" }}
-      icon={IconLocation}
-    />
+    <>
+      {places.map((place, i) => (
+        <Marker position={place.geometry} icon={IconLocation} key={i} />
+      ))}
+    </>
   );
 };
 
