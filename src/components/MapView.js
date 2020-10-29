@@ -5,18 +5,17 @@ import { Map, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 // Components
 import Markers from "./Markers";
+// Assets
+import { places } from "../assets/coords.json";
 
 const MapView = () => {
-  // Vancouver { lat: "49.281643", lng: "-123.114309" }
-  // Calgary { lat: "51.042913", lng: "-114.067616" }
-
   return (
-    <Map center={{ lat: "51.042913", lng: "-114.067616" }} zoom={13}>
+    <Map center={{ lat: "52.519873", lng: "13.405055" }} zoom={13}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
-      <Markers />
+      <Markers places={places} />
     </Map>
   );
 };
